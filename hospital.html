@@ -1,0 +1,106 @@
+<!doctype html>
+<html xmlns:wb=“http://open.weibo.com/wb”>
+  <head>
+    <title>Hospital Hotspot</title>
+    <meta name="keywords" content="医院 hospital hotspot">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <script src="js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+      }
+      #heatmapArea {
+        position:relative;
+        float:left;
+        width:88%;
+        height:800px;
+        border:1px dashed black;
+      }
+      #configArea {
+        position:relative;
+        float:left;
+        width:10%;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!--navbar -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="index.html">China Public Services</a>
+          <div class="navbar-content">
+            <ul class="nav">
+              <li><a href="">Home</a></li>
+              <li class="dropdown">
+              	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hospital <b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#mapbox">Spatial distribution</a></li>
+		          <li class="divider"></li>
+		          <li><a href="#heatmapArea">Heatmap of sites</a></li>
+		        </ul>
+		      </li> 
+		      <li><a href="">Higher Education</a> </li>
+			  <li><a href="">Railway</a></li>
+			  <li><a href="">Public transport</a> </li>
+			  <li><a href="">Air line</a></li>
+			  <li><a href="about.html">About</a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--container -->
+    <div class="container">
+      <div class="span12 hero">
+        <!--h1 title -->
+        <div class="hero-unit">
+          <h1>Public medical treatment service</h1>
+          <p>可视化大陆范围内超过8315个(覆盖率75%)公共医疗卫生服务机构的空间分布。包括三甲、乙、丙；二甲、乙、丙；专科医院；急救中心和社区诊所等</p>
+        </div>
+      </div>
+      <!--heatmap -->
+      <div class="span12">
+		<h3>Spatial distribution</h3>
+		<div id="mapbox">
+			<iframe width='100%' height='700px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/jianghaowang.g9714am8.html?secure=1#4/36.1379/104.9854'></iframe>
+		</div>
+		<h3>Heatmap of sites</h3>
+        <div id="heatmapArea"></div>
+        <div id="configArea">
+          <div id="tog" class="btn">Turn off</div>
+        </div>
+        <hr/>
+        <a href="hospital-heatmap-full.html" class="btn btn-success btn-lg"> Full</a></p>
+        <wb:share-button appkey="6dd8SN" addition="number" type="button" ralateUid="2283242060" default_text="可视化大陆范围内超过8315个(覆盖率75%)公共医疗卫生服务机构的空间分布。" pic="https://raw.github.com/Jianghao/cnPublic/gh-pages/img/hospital.PNG"></wb:share-button>
+      </div>
+    </div>
+
+	
+	
+    <script type="text/javascript" src="js/heatmap.js"></script>
+    <script type="text/javascript" src="js/heatmap-gmaps.js"></script>
+	 <script type="text/javascript" src="js/hospital-heatmap-data.js"></script>
+
+
+    <hr>
+
+    <!--footer -->
+    <footer>
+      <center>
+        <p>© Jianghao Wang 2013, All Right Reserved</p>
+      </center>
+    </footer>
+
+  </body>
+
+</html>
